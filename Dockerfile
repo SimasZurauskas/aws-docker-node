@@ -6,10 +6,10 @@ COPY package.json .
 
 COPY . .
 
-RUN yarn
+RUN npm install
 
-RUN yarn build
+RUN npm run build
 
 EXPOSE 80
 
-CMD ["yarn",  "start"]
+CMD ["npm",  "start"]

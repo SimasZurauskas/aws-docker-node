@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:16-alpine as builder
 
 WORKDIR '/app'
 
@@ -10,6 +10,8 @@ RUN yarn
 
 RUN yarn build
 
-EXPOSE 80
-
 CMD ["yarn",  "start"]
+
+FROM nginx
+EXPOSE 80
+COPY --from=builder /app/build /usr/share/nginx/html

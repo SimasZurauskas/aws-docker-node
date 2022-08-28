@@ -10,8 +10,9 @@ RUN yarn
 
 RUN yarn build
 
-CMD ["yarn",  "start"]
+
 
 FROM nginx
 EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
+CMD ["yarn",  "start"]

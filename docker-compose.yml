@@ -1,0 +1,14 @@
+version: "3"
+services:
+  quiz-api:
+    container_name: AWS_TEST
+    restart: always
+    build: .
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./src:/app/src
+      # - /app/node_modules
+      # - .:/app
+    # volumes:
+    #   - .:/app

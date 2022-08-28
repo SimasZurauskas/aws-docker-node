@@ -2,7 +2,7 @@
   "AWSEBDockerrunVersion": 2,
   "containerDefinitions": [
     {
-      "name": "api",
+      "name": "AWS_TEST",
       "image": "bartez89/madafaka:latest",
       "memory": 256,
       "command": ["yarn", "start"],

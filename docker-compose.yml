@@ -6,9 +6,9 @@ services:
     build: .
     ports:
       - "4000:80"
-    volumes:
-      - ./src:/app/src
-      # - /app/node_modules
-      # - .:/app
+    # volumes:
+    #   - ./src:/app/src
+    # - /app/node_modules
+    # - .:/app
     # volumes:
     #   - .:/app
